@@ -1,8 +1,8 @@
 CC = nasm
 LINKER = gcc
-FLAGS = -f elf64
+FLAGS = -f macho64
 
-all: colleen grace
+all: colleen
 
 colleen:
 	$(CC) $(FLAGS) colleen.s

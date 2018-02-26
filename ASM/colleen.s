@@ -9,6 +9,7 @@ _func:
 ;comment
 
 _main:
+	sub rsp, 0x8
 	lea rdi, [rel str]
 	mov rsi, 0xA
 	mov rdx, 0x09
@@ -27,5 +28,4 @@ _exit:
 	syscall
 
 section .data
-	str: db "section .text%1$c%2$cglobal main%1$c%2$cextern printf%1$c%2$cextern fflush%1$c%1$c_func:%1$c%2$cret%1$c%1$c%5$ccomment%1$c%1$cmain:%1$c%2$csub rsp, 0x8%1$c%2$clea rdi, [rel str]%1$c%2$cmov rsi, 0xA%1$c%2$cmov rdx, 0x09%1$c%2$cmov rcx, 0x22%1$c%2$clea r8, [rel str]%1$c%2$cmov r9, 0x3B%1$c%2$c%5$ccomment%1$c%2$ccall _func%1$c%2$ccall printf%1$c%2$cmov rdi, 0x0%1$c%2$ccall fflush%1$c%1$c_exit:%1$c%2$cmov rax, 0x2000001%1$c%2$cmov rdi, 0x0%1$c%2$csyscall%1$c%1$csection .data%1$c%2$cstr: db %3$c%4$s%3$c%1$c"
-
+	str: db "section .text%1$c%2$cglobal _main%1$c%2$cextern _printf%1$c%2$cextern _fflush%1$c%1$c_func:%1$c%2$cret%1$c%1$c%5$ccomment%1$c%1$c_main:%1$c%2$csub rsp, 0x8%1$c%2$clea rdi, [rel str]%1$c%2$cmov rsi, 0xA%1$c%2$cmov rdx, 0x09%1$c%2$cmov rcx, 0x22%1$c%2$clea r8, [rel str]%1$c%2$cmov r9, 0x3B%1$c%2$c%5$ccomment%1$c%2$ccall _func%1$c%2$ccall _printf%1$c%2$cmov rdi, 0x0%1$c%2$ccall _fflush%1$c%1$c_exit:%1$c%2$cmov rax, 0x2000001%1$c%2$cmov rdi, 0x0%1$c%2$csyscall%1$c%1$csection .data%1$c%2$cstr: db %3$c%4$s%3$c%1$c"
