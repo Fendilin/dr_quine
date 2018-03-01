@@ -1,5 +1,5 @@
 CC = nasm
-LINKER = gcc -g3
+LINKER = gcc
 FLAGS = -f macho64
 
 all: colleen grace sully
