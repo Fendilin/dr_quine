@@ -4,13 +4,13 @@ FLAGS = -Werror -Wall -Wextra
 all: colleen grace sully
 
 colleen:
-	$(CC) $(FLAGS) colleen.c -o Colleen
+	$(CC) $(FLAGS) Colleen.c -o Colleen
 
 grace:
-	$(CC) $(FLAGS) grace.c -o Grace
+	$(CC) $(FLAGS) Grace.c -o Grace
 
 sully:
-	$(CC) $(FLAGS) sully.c -o Sully
+	$(CC) $(FLAGS) Sully.c -o Sully
 
 sclean:
 	rm -f Sully_0\
